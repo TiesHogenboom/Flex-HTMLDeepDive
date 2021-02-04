@@ -1,0 +1,50 @@
+#fotoslider {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    transition-property: left;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(.17,.67,.85,.14);
+    
+}
+.foto {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    
+}
+body {
+    margin: 0px;
+    background-color: rgb(85, 151, 204);
+}
+#viewport {
+    position: relative;
+    height: 300px;
+    width: 400px;
+    overflow: hidden;
+    display: flex;
+    box-shadow:0px 0px 17px 4px #000000;
+}
+#fotocontrol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(94, 164, 221);
+    padding: 10px;
+    margin: 10px;
+}
+.buttonstyle {
+    padding:28px;
+    background-color: rgb(94, 164, 221);
+    color:rgb(0, 0, 0);
+    font-size: 40px;
+    border:black;
+}
