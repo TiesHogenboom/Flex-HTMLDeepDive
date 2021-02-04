@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoslider</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        let fotonummer, fotobreedte, aantalfotos, fotoslider;
+
+        function setupFotoslider() {
+        //alert("Ja, het script werkt!");
+        fotonummer = 0;
+        fotobreedte = 100; // Pas dit aan naar de breedte van jouw foto's
+
+        fotoslider = "fotoslider"/* HAAL DE FOTOSLIDER DIV OP, GEBRUIK DE ID! */
+        let volgendeKnop = "volgende-btn" /* HAAL DE VOLGENDE BUTTON OP, GEBRUIK DE ID! */
+        let vorigeKnop = "vorige-btn"/* HAAL DE VORIGE BUTTON OP, GEBRUIK DE ID! */
+
+        aantalfotos = fotoslider.children.length;
+        console.log(aantalfotos)
+        volgendeKnop.addEventListener(click,volgendeFoto);
+    }
+    function volgendeFoto() {
+        alert('volgendegeklikt');
+    }
+    
+    // VOEG HIER de code toe die de setupFotoslider() functie pas start als de DOM is volledig geladen
+    window.addEventListener('DOMContentLoaded', setupFotoslider)
+    </script>
+</head>
+<body>
+    <div id="viewport">
+        <div id="fotoslider">
+            <div class="foto"><img src="images/foto1.jpg" /></div>
+            <div class="foto"><img src="images/foto2.jpg" /></div>
+            <div class="foto"><img src="images/foto3.jpg" /></div>
+            <div class="foto"><img src="images/foto4.jpg" /></div>
+            <div class="foto"><img src="images/foto5.jpg" /></div>
+        </div>
+    </div>
+      <!-- Zet dit onder de fotoslider div -->
+      <div id="controls">
+        <button id="vorige-btn">Vorige</button>
+        <button id="volgende-btn">Volgende</button>
+    </div>
+</body>
+</html>

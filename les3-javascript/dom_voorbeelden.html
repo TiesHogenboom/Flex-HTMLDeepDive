@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoslider</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        function haalElementenOp(){
+        // Hier komt de code die je wilt uitvoeren als de pagina is geladen
+
+
+        let fotoslider = document.getElementById("fotoslider");
+        console.log(fotoslider); // Kijk in je webinspector bij de console. Dit laat zien wat je hebt opgehaald!
+
+        // Vind het eerste element met de class "foto"
+        let eersteFotoDiv = document.querySelector('.foto');
+        console.log(eersteFotoDiv); // Kijk in je webinspector bij de console. Dit laat zien wat je hebt opgehaald!
+
+        // Vind ALLE elementen met de class "foto"
+        let alleFotoDivs = document.querySelectorAll('.foto');
+        console.log(alleFotoDivs); // Kijk in je webinspector bij de console. Dit laat zien wat je hebt opgehaald!
+
+        // Kijk met de web inspector wat er gebeurt met het element, wat verandert er?
+
+            // Class aanpassen
+            fotoslider.className = 'fotoslider';
+
+            // Inhoud tussen tags aanpassen
+            fotoslider.innerHTML = 'Alle fotos vervangen door deze tekst!';
+
+            //  Style aanpassen
+            fotoslider.style.borderColor = '#0000FF';
+            fotoslider.style.borderStyle = 'solid';
+            fotoslider.style.borderWidth = '5px';
+            fotoslider.position = 'absolute';
+            fotoslider.left = '100px';
+
+                        }
+
+        // Let op je zet hier de naam van de function ZONDER de ()
+        window.addEventListener('DOMContentLoaded', haalElementenOp)
+    </script>
+</head>
+<body>
+    <div id="fotoslider">
+        <div class="foto"><img src="images/foto1.jpg" /></div>
+        <div class="foto"><img src="images/foto2.jpg" /></div>
+        <div class="foto"><img src="images/foto3.jpg" /></div>
+    </div>
+</body>
+</html>
